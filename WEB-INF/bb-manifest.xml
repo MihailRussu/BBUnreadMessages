@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<manifest>
+    <!-- core extension information -->
+    <plugin>
+        <name value="Unread Messages Notification"/>
+        <handle value="unreadmsgs"/>
+        <description value="This building block is a module that shows courses with unread messages"/>
+        <version value="0.0.1"/>
+        <requires>
+            <bbversion value="9.1"/>
+        </requires>
+        <vendor>
+            <id value="mcmo"/>
+            <name value="Mercy College Mercy Online"/>
+            <url value="http://mercy.edu/"/>
+            <description value="Mercy College Online Department. Mihail Russu."/>
+        </vendor>
+
+        <module-defs>
+
+            <module-type ext-ref="mo_unreadmsgs" title="Unread Course Email Messages" uicreatable="true">
+                <jsp>
+                    <view>unread_messages.jsp</view>
+                </jsp>
+            </module-type>
+
+            <module type="mo_unreadmsgs" isadmin="false" useraddable="true" isdeletable="false"
+                    isdetachable="true" isavailabletocourse="true"
+                    title="Unread Course Email Messages">
+                <description>Module that shows notifications if there are unread messages in any of the enrolled courses.
+                </description>
+                <ExtraInfo/>
+                <module-groups>
+                    <module-group id="Everyone"/>
+                </module-groups>
+            </module>
+
+        </module-defs>
+
+        <permissions>
+            <permission type="attribute" name="user.authinfo" actions="get"/>
+            <permission type="attribute" name="user.personalinfo" actions="get"/>
+        </permissions>
+    </plugin>
+
+</manifest>
