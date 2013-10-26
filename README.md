@@ -3,7 +3,7 @@ BBUnreadMessages
 
 Blackboard Building Block Module for Unread Course Messages Notification
 
-
+<img src="unreadmsgs.png" />
 - Show number of unread messages
 - Show up to three unread messages (sender/subject/date sent)
 - Show all available course on Institutional page
